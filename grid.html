@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Grid</title>
+    <style>
+        body{
+            padding: 0%;
+            margin: 0%;
+            box-sizing: border-box;
+        }
+        .parent{
+            height: 100vh;
+            display: grid;
+            grid-template-rows: 10% 80% 10%;
+            grid-template-columns: 20% 60% 20%;
+        }
+        .parent__header{
+            background-color: aqua;
+            grid-column: 1/-1;
+            grid-row: 1/2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .parent__leftmenu{
+            background-color:red;
+            grid-column: 1/2;
+            grid-row: 2/3;
+            display: flex;
+            justify-content:center;
+            align-items:first baseline;
+        }
+        .parent__main{
+            background-color:blue;
+            grid-column: 2/3;
+            grid-row: 2/3;
+            display: flex;
+            justify-content: center;
+            align-items: first baseline;
+        }
+        .parent__rightmenu{
+            background-color:red;
+            grid-column:3/-1 ;
+            grid-row:2/3;
+            display: flex;
+            justify-content: center;
+            align-items:first baseline;
+        }
+        .parent__footer{
+            background-color: aqua;
+            grid-column: 1/-1;
+            grid-row:3/-1;
+            display: flex;
+            justify-content: center;
+            align-items:first baseline;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="parent__header">
+            <p>Header</p>
+        </div>
+        <div class="parent__leftmenu">
+            <p>leftmenu</p>
+        </div>
+        <div class="parent__main">
+            <p>main</p>
+        </div>
+        <div class="parent__rightmenu">
+            <p>rightmenu</p>
+        </div>
+        <div class="parent__footer">
+            <p>footer</p>
+        </div>
+    </div>
+    
+</body>
+</html>

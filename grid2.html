@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Grid</title>
+    <style>
+        body{
+            padding: 0%;
+            margin: 0%;
+            box-sizing: border-box;
+        }
+        .parent{
+            height: 100vh;
+            display: grid;
+            gap: 10px;
+            grid-template-rows: 10% 10% 80%;
+            grid-template-columns: 33% 33% 33%;
+        }
+        .parent__header{
+            background-color: aqua;
+            grid-column: 1/-1;
+            grid-row: 1/2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .parent__search{
+            background-color:red;
+            grid-column: 1/3;
+            grid-row: 2/3;
+            display: flex;
+            justify-content:center;
+            align-items:first baseline;
+        }
+        .parent__leftsidebar{
+            background-color:blue;
+            grid-column: 1/2;
+            grid-row: 3/4;
+            display: flex;
+            justify-content: center;
+            align-items: first baseline;
+        }
+        .parent__middlecolum{
+            background-color:brown;
+            grid-column:2/3 ;
+            grid-row:3/4;
+            display: flex;
+            justify-content: center;
+            align-items:first baseline;
+        }
+        .parent__rightsidebar{
+            background-color:yellow;
+            grid-column: 3/4;
+            grid-row:2/4;
+            display: flex;
+            justify-content: center;
+            align-items:first baseline;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="parent__header">
+            <p>Header</p>
+        </div>
+        <div class="parent__search">
+            <p>search</p>
+        </div>
+        <div class="parent__leftsidebar">
+            <p>leftsidebar</p>
+        </div>
+        <div class="parent__middlecolum">
+            <p>middlecolum</p>
+        </div>
+        <div class="parent__rightsidebar">
+            <p>rightsidebar</p>
+        </div>
+    </div>
+    
+</body>
+</html>
